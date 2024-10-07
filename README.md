@@ -43,7 +43,7 @@ Tmux is great, but also can cause a lot of pain if you don't set it up right. It
 ### Setup
 
 1. Install [tmux](https://github.com/tmux/tmux/wiki/Installing)
-2. Install [tmp](git clone <https://github.com/tmux-plugins/tpm> ~/.tmux/plugins/tpm)
+2. Install [tmp](https://github.com/tmux-plugins/tpm)
 3. Install [catppuccin for tmux](https://github.com/catppuccin/tmux)
 4. Setup your config as follows in `~/.tmux.conf`
 
