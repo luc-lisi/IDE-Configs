@@ -153,3 +153,39 @@ return {
   }
 }
 ```
+
+## LazyGit
+
+This is a massive quality of life improvement that gives a really nice terminal UI to let us interact with git. It's also standard across OS's and integrates with LazyVim which is great. Without this, VS code would really just win with it's source control management.
+
+### Install and Setup
+
+The repo can be found [here](https://github.com/jesseduffield/lazygit). It's really clear so just follow the instructions for your OS.
+
+To get things setup with LazyVim, first make a new `/plugin/lazygit.lua` file. We will be using the [lazygit.nvim plugin](https://github.com/kdheepak/lazygit.nvim). To configure it, just use the following lua file:
+
+```lua
+```lua
+return {
+      "kdheepak/lazygit.nvim",
+      lazy = true,
+      cmd = {
+          "LazyGit",
+          "LazyGitConfig",
+          "LazyGitCurrentFile",
+          "LazyGitFilter",
+          "LazyGitFilterCurrentFile",
+      },
+      -- optional for floating window border decoration
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+      },
+      -- setting the keybinding for LazyGit with 'keys' is recommended in
+      -- order to load the plugin when the command is run for the first time
+      keys = {
+          { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+      }
+}
+```
+
+This is just the default config from the repo, but I like it. The key here is that `<leader>lg` will let us open lazygit without having to open a new sessions somewhere else.
